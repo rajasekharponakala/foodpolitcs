@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f3efe5">
+  <meta name="description" content="Plate & Power — an interactive visual companion to Dr Sylvia Karpagam’s The Meat of the Matter. Explore nutrition, identity, food policy and the systems behind the plate.">
+  <meta property="og:title" content="Plate & Power — The Meat of the Matter, visualised">
+  <meta property="og:description" content="An interactive field guide to food, nutrition and power.">
+  <meta property="og:type" content="website">
+  <title>Plate & Power — The Meat of the Matter, visualised</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
+
+  <svg class="svg-sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"></path></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"></path></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 0 1 3 3v14a4 4 0 0 0-4-3H4zM20 4h-4a3 3 0 0 0-3 3v14a4 4 0 0 1 4-3h3z"></path></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"></path></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="11" height="12" rx="2"></rect><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h3"></path></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M10 5H5a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1v-5"></path></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v6M12 7v.2"></path></symbol>
+  </svg>
+
+  <header class="site-header" id="site-header">
+    <a class="brand" href="#overview" aria-label="Plate and Power, home">
+      <span class="brand-mark" aria-hidden="true">F/P</span>
+      <span class="brand-name">FOOD<span>/</span>POLITICS</span>
+      <span class="beta-badge">BETA</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#access">Access</a>
+      <a href="#nutrients">Nutrients</a>
+      <a href="#myths">Myths</a>
+      <a href="#policy">Policy</a>
+      <a href="#chapters">Chapters</a>
+      <a href="#action">Act</a>
+    </nav>
+    <div class="header-actions">
+      <button class="search-trigger" id="search-trigger" type="button" aria-haspopup="dialog">
+        <svg class="icon"><use href="#i-search"></use></svg>
+        <span>Explore</span><kbd>/</kbd>
+      </button>
+      <button class="menu-trigger" id="menu-trigger" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation">
+        <svg class="icon"><use href="#i-menu"></use></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="#access"><span>01</span> Access</a>
+      <a href="#nutrients"><span>02</span> Nutrients</a>
+      <a href="#meal-lab"><span>03</span> Meal lab</a>
+      <a href="#myths"><span>04</span> Myth decoder</a>
+      <a href="#policy"><span>05</span> Policy</a>
+      <a href="#chapters"><span>06</span> Chapter map</a>
+      <a href="#action"><span>07</span> Take action</a>
+      <a href="#sources"><span>08</span> Sources</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section-shell" id="overview" aria-labelledby="hero-title">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-copy reveal">
+        <div class="eyebrow-row">
+          <span class="eyebrow">An interactive book companion</span>
+          <span class="edition">INDIA · 2026</span>
+        </div>
+        <h1 id="hero-title">THE PLATE IS<br>NEVER <span class="marker">JUST</span><br>A PLATE.</h1>
+        <p class="hero-deck">Food is personal. <strong>Nourishment is political.</strong> Trace how nutrients, identity, markets and policy shape what reaches us.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#access">Trace the system <svg class="icon"><use href="#i-arrow"></use></svg></a>
+          <a class="button button-ghost" href="#chapters"><svg class="icon"><use href="#i-book"></use></svg> Open chapter map</a>
+        </div>
+        <div class="book-byline">
+          <span class="byline-line" aria-hidden="true"></span>
+          <p>Based on <cite>The Meat of the Matter</cite><br><strong>Dr Sylvia Karpagam</strong> · HarperCollins India</p>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="hero-stage">
+          <span class="stage-label stage-label-top">SYSTEM VIEW / 01</span>
+          <span class="stage-label stage-label-bottom">CLICK A LENS TO EXPLORE</span>
+          <div class="plate-orbit" aria-hidden="true">
+            <div class="orbit-ring orbit-ring-one"></div>
+            <div class="orbit-ring orbit-ring-two"></div>
+          </div>
+          <div class="hero-plate">
+            <div class="plate-inner">
+              <span class="plate-small">ON YOUR PLATE?</span>
+              <strong>LOOK<br>DEEPER.</strong>
+              <span class="plate-arrow" aria-hidden="true">↘</span>
+            </div>
+          </div>
+          <button class="lens-node node-nutrients" type="button" data-hero-lens="nutrients" aria-pressed="false"><span>01</span>NUTRIENTS</button>
+          <button class="lens-node node-access" type="button" data-hero-lens="access" aria-pressed="false"><span>02</span>ACCESS</button>
+          <button class="lens-node node-identity" type="button" data-hero-lens="identity" aria-pressed="false"><span>03</span>IDENTITY</button>
+          <button class="lens-node node-power" type="button" data-hero-lens="power" aria-pressed="false"><span>04</span>POWER</button>
+        </div>
+        <div class="hero-insight" id="hero-insight" aria-live="polite">
+          <span class="insight-index" id="insight-index">00</span>
+          <div><strong id="insight-title">A meal is the end of a long chain.</strong><p id="insight-text">Choose a lens to see what sits between food availability and a nourished person.</p></div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#signals"><span>SCROLL TO FOLLOW THE FOOD</span><i aria-hidden="true"></i></a>
+    </section>
+
+    <section class="signals" id="signals" aria-label="Key numbers from the book's evidence base">
+      <div class="signals-heading">
+        <span class="eyebrow eyebrow-light">SIGNALS, NOT A SCORECARD</span>
+        <p>A historical snapshot of the figures cited in the book. Different surveys, ages and years are not directly interchangeable.</p>
+        <button class="text-button text-button-light" type="button" data-open-source="S1">How to read these numbers <svg class="icon"><use href="#i-arrow"></use></svg></button>
+      </div>
+      <article class="signal-card signal-coral reveal">
+        <span class="signal-number">67<span>%</span></span>
+        <p>of children aged 6–59 months had some degree of anaemia</p>
+        <span class="signal-source">NFHS-5 · 2019–21 <button type="button" data-open-source="S1" aria-label="Open source for child anaemia">↗</button></span>
+      </article>
+      <article class="signal-card signal-lime reveal">
+        <span class="signal-number">36<span>%</span></span>
+        <p>of children under six measured were stunted</p>
+        <span class="signal-source">Dec 2023 parliamentary statement <button type="button" data-open-source="S3" aria-label="Open source for stunting">↗</button></span>
+      </article>
+      <article class="signal-card signal-blue reveal">
+        <span class="signal-number">53<span>%</span></span>
+        <p>of infants aged 6–8 months received timely complementary feeding</p>
+        <span class="signal-source">NFHS-5 · 2019–21 <button type="button" data-open-source="S1" aria-label="Open source for complementary feeding">↗</button></span>
+      </article>
+      <article class="signal-card signal-yellow reveal">
+        <span class="signal-number">48<span>%</span></span>
+        <p>underweight in the poorest wealth quintile, versus 19% in the richest</p>
+        <span class="signal-source">Children under five · CNNS 2016–18 <button type="button" data-open-source="S2" aria-label="Open source for wealth gap">↗</button></span>
+      </article>
+    </section>
+
+    <section class="content-section section-shell" id="access" aria-labelledby="access-title">
+      <div class="section-heading reveal">
+        <div><span class="section-index">01 / ACCESS</span><h2 id="access-title">Hunger is not<br>only an empty plate.</h2></div>
+        <p>Malnutrition can exist with enough calories, overweight, or food that is present but socially forbidden. Follow the barriers between availability and nourishment.</p>
+      </div>
+
+      <div class="access-layout">
+        <div class="access-chain reveal" aria-label="Interactive access chain">
+          <div class="chain-track" aria-hidden="true"><span id="chain-progress"></span></div>
+          <div class="chain-buttons" id="access-buttons"></div>
+          <article class="access-detail glass-panel" id="access-detail" aria-live="polite"></article>
+        </div>
+        <aside class="inequality-card reveal">
+          <span class="eyebrow">THE WEALTH GAP</span>
+          <h3>Same country.<br>Different starting line.</h3>
+          <p>Underweight among children under five, by household wealth quintile.</p>
+          <div class="gap-chart" role="img" aria-label="Underweight prevalence: 48 percent in the poorest wealth quintile and 19 percent in the richest wealth quintile">
+            <div class="gap-row"><span>Poorest</span><div class="gap-track"><i style="--bar:48%"></i></div><strong>48%</strong></div>
+            <div class="gap-row"><span>Richest</span><div class="gap-track"><i style="--bar:19%"></i></div><strong>19%</strong></div>
+          </div>
+          <div class="gap-callout"><strong>2.5×</strong><span>the prevalence in the poorest quintile</span></div>
+          <p class="micro-copy">CNNS, 2016–18. Association is not a complete causal explanation; income is one part of a wider system.</p>
+          <button class="text-button" type="button" data-open-source="S2">Inspect source <svg class="icon"><use href="#i-arrow"></use></svg></button>
+        </aside>
+      </div>
+      <div class="pull-quote reveal"><span aria-hidden="true">“</span><blockquote>A diet label is not a nutrition assessment. A policy target is not a meal eaten.</blockquote><small>— Visual companion synthesis</small></div>
+    </section>
+
+    <section class="content-section section-shell" id="nutrients" aria-labelledby="nutrients-title">
+      <div class="section-heading reveal">
+        <div><span class="section-index">02 / NUTRIENTS</span><h2 id="nutrients-title">Read food<br>like a system.</h2></div>
+        <p>Nutrients interact. Preparation changes availability. The body’s needs change with age, health and life stage. Explore three lenses without reducing food to a single score.</p>
+      </div>
+
+      <div class="nutrient-lab reveal">
+        <div class="nutrient-tabs" role="tablist" aria-label="Nutrient views">
+          <button id="tab-protein" type="button" role="tab" aria-selected="true" aria-controls="nutrient-panel" data-nutrient="protein"><span>01</span> Protein quality</button>
+          <button id="tab-iron" type="button" role="tab" aria-selected="false" aria-controls="nutrient-panel" data-nutrient="iron" tabindex="-1"><span>02</span> Iron absorption</button>
+          <button id="tab-b12" type="button" role="tab" aria-selected="false" aria-controls="nutrient-panel" data-nutrient="b12" tabindex="-1"><span>03</span> Vitamin B12</button>
+        </div>
+        <div class="nutrient-panel" id="nutrient-panel" role="tabpanel" aria-labelledby="tab-protein" tabindex="0"></div>
+      </div>
+
+      <div class="timeline-block reveal">
+        <div class="timeline-intro"><span class="eyebrow">THE FIRST THOUSAND DAYS</span><h3>A window that<br>compounds.</h3><p>Early nutrition is connected to pregnancy, breastfeeding, complementary feeding, infection and care.</p><button class="text-button" type="button" data-open-source="S15">WHO guidance <svg class="icon"><use href="#i-arrow"></use></svg></button></div>
+        <div class="timeline-steps">
+          <article><span class="timeline-dot"></span><span class="timeline-age">PREGNANCY</span><h4>Build the foundation</h4><p>Maternal nutrition, health, food access and care influence the start of life.</p></article>
+          <article><span class="timeline-dot"></span><span class="timeline-age">0–6 MONTHS</span><h4>Breastfeeding matters</h4><p>WHO guidance recommends exclusive breastfeeding for the first six months.</p></article>
+          <article><span class="timeline-dot"></span><span class="timeline-age">FROM 6 MONTHS</span><h4>Add diverse foods</h4><p>Complementary foods add nutrients and eating experiences while breastfeeding continues.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="meal-section" id="meal-lab" aria-labelledby="meal-title">
+      <div class="section-shell">
+        <div class="section-heading section-heading-light reveal">
+          <div><span class="section-index">03 / MEAL LAB</span><h2 id="meal-title">Build a tray.<br>Ask better questions.</h2></div>
+          <p>This learning model tracks food roles—not calories, clinical adequacy or exact nutrient totals. Portion size, age, preparation and individual health are not modelled.</p>
+        </div>
+        <div class="meal-lab glass-dark reveal">
+          <div class="meal-options">
+            <div class="meal-options-head"><span class="eyebrow eyebrow-light">SELECT FOODS</span><button class="text-button text-button-light" id="meal-reset" type="button">Reset tray</button></div>
+            <div class="food-grid" id="food-grid"></div>
+            <div class="meal-presets"><span>TRY A PATTERN</span><button type="button" data-meal-preset="cereal">Cereal-forward</button><button type="button" data-meal-preset="lacto">Diverse lacto-veg</button><button type="button" data-meal-preset="mixed">Diverse with egg/fish</button></div>
+          </div>
+          <div class="meal-result">
+            <div class="meal-plate" id="meal-plate" aria-hidden="true"><span>YOUR<br>TRAY</span></div>
+            <div class="meal-score"><span class="eyebrow eyebrow-light">FOOD ROLE COVERAGE</span><strong id="meal-score">0<span>/7</span></strong><p id="meal-summary">Choose foods to see which roles this learning tray represents.</p></div>
+            <div class="role-list" id="role-list"></div>
+            <p class="meal-disclaimer"><svg class="icon"><use href="#i-info"></use></svg> Educational illustration only. A diverse tray is not automatically an adequate diet; seek qualified guidance for individual needs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section section-shell" id="myths" aria-labelledby="myths-title">
+      <div class="section-heading reveal">
+        <div><span class="section-index">04 / MYTH DECODER</span><h2 id="myths-title">Pause the claim.<br>Open the evidence.</h2></div>
+        <p>The book challenges familiar food myths. Each card separates the claim, the book’s response and the nuance a headline usually loses.</p>
+      </div>
+      <div class="filter-row reveal" id="myth-filters" aria-label="Filter myths">
+        <button type="button" class="filter-chip is-active" data-myth-filter="all" aria-pressed="true">All claims <span>8</span></button>
+        <button type="button" class="filter-chip" data-myth-filter="nutrition" aria-pressed="false">Nutrition <span>4</span></button>
+        <button type="button" class="filter-chip" data-myth-filter="identity" aria-pressed="false">Identity <span>3</span></button>
+        <button type="button" class="filter-chip" data-myth-filter="policy" aria-pressed="false">Policy <span>1</span></button>
+      </div>
+      <div class="myth-grid" id="myth-grid" aria-live="polite"></div>
+      <p class="filter-status" id="myth-status" aria-live="polite">Showing all 8 claims</p>
+    </section>
+
+    <section class="policy-section" id="policy" aria-labelledby="policy-title">
+      <div class="section-shell">
+        <div class="section-heading section-heading-light reveal">
+          <div><span class="section-index">05 / POLICY</span><h2 id="policy-title">A meal is made<br>long before lunch.</h2></div>
+          <p>Follow the public meal from budget to outcome. Then switch the evidence lens to see which claims are rules, studies, arguments or unresolved allegations.</p>
+        </div>
+        <div class="policy-pipeline reveal" aria-label="School meal delivery pipeline">
+          <div><span>01</span><strong>BUDGET</strong><small>What is funded?</small></div><i aria-hidden="true">→</i>
+          <div><span>02</span><strong>SUPPLIER</strong><small>Who is accountable?</small></div><i aria-hidden="true">→</i>
+          <div><span>03</span><strong>MENU</span><small>What is planned?</small></div><i aria-hidden="true">→</i>
+          <div><span>04</span><strong>SERVED</strong><small>What arrives?</small></div><i aria-hidden="true">→</i>
+          <div><span>05</span><strong>EATEN</strong><small>What is consumed?</small></div><i aria-hidden="true">→</i>
+          <div><span>06</span><strong>OUTCOME</strong><small>What changes?</small></div>
+        </div>
+        <div class="evidence-toolbar reveal">
+          <div><span class="eyebrow eyebrow-light">EVIDENCE LENS</span><p id="evidence-count">Showing 6 items</p></div>
+          <div class="filter-row filter-row-dark" id="evidence-filters" aria-label="Filter by evidence type">
+            <button type="button" class="filter-chip is-active" data-evidence-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="filter-chip" data-evidence-filter="rule" aria-pressed="false">Official rule</button>
+            <button type="button" class="filter-chip" data-evidence-filter="study" aria-pressed="false">Study / model</button>
+            <button type="button" class="filter-chip" data-evidence-filter="argument" aria-pressed="false">Author’s argument</button>
+            <button type="button" class="filter-chip" data-evidence-filter="allegation" aria-pressed="false">Allegation</button>
+          </div>
+        </div>
+        <div class="policy-grid" id="policy-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="content-section section-shell" id="tradeoffs" aria-labelledby="tradeoffs-title">
+      <div class="section-heading reveal">
+        <div><span class="section-index">06 / TRADE-OFF CANVAS</span><h2 id="tradeoffs-title">One plate.<br>Four obligations.</h2></div>
+        <p>Good food policy cannot optimize one value and ignore the rest. Select a lens to see what a fair evaluation should ask.</p>
+      </div>
+      <div class="tradeoff-layout reveal">
+        <div class="tradeoff-tabs" id="tradeoff-tabs" role="tablist" aria-label="Policy evaluation lenses"></div>
+        <article class="tradeoff-detail" id="tradeoff-detail" role="tabpanel" tabindex="0"></article>
+      </div>
+      <p class="canvas-note reveal"><span>NOTE</span> This canvas deliberately refuses to collapse nutrition, climate, livelihood and rights into one artificial score.</p>
+    </section>
+
+    <section class="chapter-section" id="chapters" aria-labelledby="chapters-title">
+      <div class="section-shell">
+        <div class="section-heading section-heading-light reveal">
+          <div><span class="section-index">07 / CHAPTER MAP</span><h2 id="chapters-title">Ten chapters.<br>One connected argument.</h2></div>
+          <p>Move chapter by chapter, or jump to the question that matters to you. Each chapter card opens a concise, attributed briefing.</p>
+        </div>
+        <div class="chapter-grid" id="chapter-grid"></div>
+      </div>
+    </section>
+
+    <section class="content-section section-shell" id="action" aria-labelledby="action-title">
+      <div class="section-heading reveal">
+        <div><span class="section-index">08 / TAKE ACTION</span><h2 id="action-title">From the plate<br>to the table.</h2></div>
+        <p>Choose your role and build a small, practical checklist. Your progress is saved only in this browser—no account and no tracking.</p>
+      </div>
+      <div class="action-lab reveal">
+        <div class="action-tabs" id="action-tabs" role="tablist" aria-label="Choose your role"></div>
+        <div class="action-content">
+          <div class="action-heading"><div><span class="eyebrow" id="action-eyebrow">YOUR ROLE</span><h3 id="action-title-role">Students</h3><p id="action-intro"></p></div><div class="action-progress"><strong id="action-progress">0/4</strong><span>actions checked</span></div></div>
+          <div class="progress-track"><span id="action-progress-bar"></span></div>
+          <div class="action-checklist" id="action-checklist" role="tabpanel" tabindex="0"></div>
+          <div class="action-footer"><button class="button button-primary" id="copy-checklist" type="button"><svg class="icon"><use href="#i-copy"></use></svg> Copy checklist</button><button class="text-button" id="clear-checklist" type="button">Clear this role</button><span id="save-status">Saved on this device</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sources-section" id="sources" aria-labelledby="sources-title">
+      <div class="section-shell">
+        <div class="section-heading reveal">
+          <div><span class="section-index">09 / SOURCES & METHOD</span><h2 id="sources-title">Follow the evidence.<br>Keep the context.</h2></div>
+          <p>This companion summarizes and visualizes the book’s arguments. It does not reproduce the book and does not replace original research, current law or professional medical advice.</p>
+        </div>
+        <div class="method-grid reveal">
+          <article><span>01</span><h3>Attribution</h3><p>Survey findings, study estimates, official rules, reported allegations and the author’s arguments use different labels.</p></article>
+          <article><span>02</span><h3>Comparability</h3><p>NFHS-5, CNNS and administrative measurements use different samples, age groups and years. They are not one time series.</p></article>
+          <article><span>03</span><h3>Medical caution</h3><p>Nutrient requirements and health conditions vary. The site offers literacy, not diagnoses, supplement doses or personalized diets.</p></article>
+        </div>
+        <div class="book-citation reveal">
+          <div><span class="eyebrow">THE BOOK</span><h3><cite>The Meat of the Matter</cite></h3><p>Dr Sylvia Karpagam · HarperCollins India · 2026<br>P-ISBN 978-93-7307-528-0 · E-ISBN 978-93-7307-051-3</p></div>
+          <p class="book-citation-note">Independent educational companion. Book text and cover art are not republished. Statistics reflect the evidence periods cited in the book, not a live data feed.</p>
+        </div>
+        <div class="source-list" id="source-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top"><a class="brand brand-footer" href="#overview"><span class="brand-mark">F/P</span><span class="brand-name">FOOD<span>/</span>POLITICS</span></a><p>Food is personal.<br><strong>Nourishment is collective.</strong></p><a class="button button-lime" href="#overview">Back to the plate <svg class="icon"><use href="#i-up"></use></svg></a></div>
+    <div class="footer-bottom"><span>AN INTERACTIVE VISUAL COMPANION · BETA 0.1</span><span>BUILT FOR CURIOSITY, NOT FOOD SHAMING.</span><a href="#sources">Sources & limitations</a></div>
+  </footer>
+
+  <dialog class="search-dialog" id="search-dialog" aria-labelledby="search-title">
+    <div class="dialog-head"><div><span class="eyebrow">EXPLORE THE COMPANION</span><h2 id="search-title">What do you want to unpack?</h2></div><button class="icon-button" type="button" data-close-dialog aria-label="Close search"><svg class="icon"><use href="#i-close"></use></svg></button></div>
+    <label class="search-field"><svg class="icon"><use href="#i-search"></use></svg><input id="search-input" type="search" placeholder="Try “iron”, “school meal”, “caste” or “B12”…" autocomplete="off" aria-describedby="search-help"><kbd>ESC</kbd></label>
+    <p id="search-help" class="micro-copy">Search chapters, claims, concepts and sources. Use arrow keys to move and Enter to open.</p>
+    <div class="search-results" id="search-results"></div>
+  </dialog>
+
+  <dialog class="source-dialog" id="source-dialog" aria-labelledby="source-title">
+    <div class="dialog-head"><div><span class="eyebrow" id="source-type">SOURCE</span><h2 id="source-title">Evidence note</h2></div><button class="icon-button" type="button" data-close-dialog aria-label="Close source"><svg class="icon"><use href="#i-close"></use></svg></button></div>
+    <div class="source-dialog-body" id="source-dialog-body"></div>
+  </dialog>
+
+  <dialog class="chapter-dialog" id="chapter-dialog" aria-labelledby="chapter-dialog-title">
+    <div class="dialog-head"><div><span class="eyebrow" id="chapter-dialog-kicker">CHAPTER</span><h2 id="chapter-dialog-title"></h2></div><button class="icon-button" type="button" data-close-dialog aria-label="Close chapter"><svg class="icon"><use href="#i-close"></use></svg></button></div>
+    <div class="chapter-dialog-body" id="chapter-dialog-body"></div>
+  </dialog>
+
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Back to top"><svg class="icon"><use href="#i-up"></use></svg></button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <noscript><div class="noscript-message">This interactive companion needs JavaScript for its labs and chapter cards. The book summaries and source information remain available in the page text where possible.</div></noscript>
+
+  <script type="module" src="assets/data.js"></script>
+  <script type="module" src="assets/app.js"></script>
+</body>
+</html>
